@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الدعم — يلا لايف | Support — Yalla Live</title>
+<meta name="description" content="صفحة الدعم لتطبيق يلا لايف — Support page for the Yalla Live football app." />
+<style>
+  :root{
+    --bg:#0b1120; --card:#111a2e; --text:#e8edf7; --sub:#9aa7c0;
+    --line:#22304d; --accent:#16e58b; --accent2:#3aa0ff;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f7fb; --card:#ffffff; --text:#101828; --sub:#5a6577; --line:#e5e9f0; }
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Naskh Arabic","Segoe UI Arabic",sans-serif;
+    line-height:1.85; font-size:16px;
+  }
+  .wrap{ max-width:760px; margin:0 auto; padding:32px 20px 72px; }
+  header{ display:flex; align-items:center; gap:14px; margin-bottom:8px; }
+  .logo{
+    width:44px; height:44px; border-radius:12px; flex:0 0 auto;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:flex; align-items:center; justify-content:center; color:#0b1120; font-size:22px;
+  }
+  h1{ font-size:1.5rem; margin:0; }
+  .sub{ color:var(--sub); font-size:.85rem; margin:2px 0 26px; }
+  .toggle{ display:flex; gap:6px; margin:0 0 26px; }
+  .toggle button{
+    border:1px solid var(--line); background:var(--card); color:var(--sub);
+    padding:7px 16px; border-radius:999px; cursor:pointer; font-size:.9rem; font-weight:600;
+  }
+  .toggle button[aria-pressed="true"]{
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#0b1120; border-color:transparent;
+  }
+  h2{ font-size:1.08rem; color:var(--accent); margin:26px 0 6px; }
+  p{ margin:8px 0; color:var(--text); }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin:10px 0; }
+  .email{ font-family:monospace; font-size:1.05rem; direction:ltr; display:inline-block; }
+  a{ color:var(--accent2); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  ul{ margin:8px 0; padding-inline-start:22px; }
+  li{ margin:6px 0; }
+  .foot{ margin-top:34px; padding-top:16px; border-top:1px solid var(--line); color:var(--sub); font-size:.85rem; }
+  [hidden]{ display:none !important; }
+  .doc[dir="ltr"]{ text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">⚽</div>
+    <div>
+      <h1 id="pageTitle">الدعم</h1>
+      <div class="sub" id="subtitle">يلا لايف · نسعد بمساعدتك</div>
+    </div>
+  </header>
+
+  <div class="toggle" role="group" aria-label="Language">
+    <button id="btnAr" aria-pressed="true" onclick="setLang('ar')">العربية</button>
+    <button id="btnEn" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- Arabic -->
+  <section class="doc" id="ar" dir="rtl">
+    <p>يسعدنا مساعدتك في أي مشكلة أو استفسار حول تطبيق يلا لايف. راسلنا مباشرة وسنردّ في أقرب وقت.</p>
+
+    <div class="card">
+      <strong>البريد الإلكتروني للدعم</strong><br />
+      <span class="email"><a href="mailto:contact.yallamax@gmail.com">contact.yallamax@gmail.com</a></span>
+    </div>
+
+    <h2>أسئلة شائعة</h2>
+    <ul>
+      <li><strong>لا تظهر مباريات اليوم؟</strong> تحقّق من اتصالك بالإنترنت واسحب الشاشة للأسفل للتحديث.</li>
+      <li><strong>لا تصلني تنبيهات الأهداف؟</strong> تأكّد من تفعيل الإشعارات للتطبيق من إعدادات جهازك، وأن الفريق مُضاف إلى المفضّلة.</li>
+      <li><strong>روابط البثّ لا تعمل؟</strong> روابط البثّ تُقدَّم من أطراف خارجية ولسنا الجهة المضيفة لها؛ جرّب سيرفراً آخر من القائمة إن توفّر.</li>
+      <li><strong>لديك اقتراح أو ملاحظة؟</strong> نرحّب بها دائماً على البريد أعلاه.</li>
+    </ul>
+
+    <h2>روابط مفيدة</h2>
+    <ul>
+      <li><a href="./index.html">سياسة الخصوصية</a></li>
+    </ul>
+  </section>
+
+  <!-- English -->
+  <section class="doc" id="en" dir="ltr" hidden>
+    <p>We're happy to help with any issue or question about the Yalla Live app. Email us directly and we'll get back to you soon.</p>
+
+    <div class="card">
+      <strong>Support email</strong><br />
+      <span class="email"><a href="mailto:contact.yallamax@gmail.com">contact.yallamax@gmail.com</a></span>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <ul>
+      <li><strong>Today's matches aren't showing?</strong> Check your internet connection and pull down to refresh.</li>
+      <li><strong>Not receiving goal alerts?</strong> Make sure notifications are enabled for the app in your device settings, and the team is added to your favorites.</li>
+      <li><strong>Stream links aren't working?</strong> Stream links are provided by third parties; we don't host them. Try another server from the list if one is available.</li>
+      <li><strong>Have a suggestion or feedback?</strong> We always welcome it at the email above.</li>
+    </ul>
+
+    <h2>Useful links</h2>
+    <ul>
+      <li><a href="./index.html">Privacy Policy</a></li>
+    </ul>
+  </section>
+
+  <div class="foot" id="foot">يلا لايف (Yalla Live) — الدعم</div>
+</div>
+
+<script>
+  function setLang(lang){
+    var ar = lang === 'ar';
+    document.getElementById('ar').hidden = !ar;
+    document.getElementById('en').hidden = ar;
+    document.getElementById('btnAr').setAttribute('aria-pressed', ar);
+    document.getElementById('btnEn').setAttribute('aria-pressed', !ar);
+    document.documentElement.lang = ar ? 'ar' : 'en';
+    document.documentElement.dir = ar ? 'rtl' : 'ltr';
+    document.getElementById('pageTitle').textContent = ar ? 'الدعم' : 'Support';
+    document.getElementById('subtitle').textContent = ar ? 'يلا لايف · نسعد بمساعدتك' : "Yalla Live · We're here to help";
+    document.getElementById('foot').textContent = ar ? 'يلا لايف (Yalla Live) — الدعم' : 'Yalla Live — Support';
+  }
+</script>
+</body>
+</html>
